@@ -12,7 +12,7 @@ pipeline {
             steps {
                 script {
                 	echo "Running Unit Test..."
-			sh './gradlew clean test'
+			sh 'sudo ./gradlew clean test'
         	}
     	    }
 	}
