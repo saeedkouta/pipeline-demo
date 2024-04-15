@@ -17,6 +17,7 @@ RUN ./gradlew dependencies
 COPY . .
 
 # Build the application using the Gradle Wrapper
+RUN chmod +X gradlew
 RUN ./gradlew build --stacktrace
 
 # Use a minimal base image for the runtime
