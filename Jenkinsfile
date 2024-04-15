@@ -31,7 +31,7 @@ pipeline {
         stage('push Docker Image') {
             steps {
                 script {
-        		echo pushing docker image ..."
+        		echo "pushing docker image ..."
 			withCredentials([usernamePassword(credentialsId: "${dockerHubCredentialsID}", usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
 				sh "docker login -u ${USERNAME} -p ${PASSWORD}"
         		}
