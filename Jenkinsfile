@@ -32,7 +32,7 @@ pipeline {
             steps {
                 script {
         		echo pushing docker image ..."
-			withCredentials([usernamePassword(credentialsId: "${dockerHubCredentialsID}", usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+			withCredentials([usernamePassword(credentialsId: "${dockerHubCredentialsID}", usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
 				sh "docker login -u ${USERNAME} -p ${PASSWORD}"
         		}
                 }
